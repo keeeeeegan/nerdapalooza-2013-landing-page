@@ -310,23 +310,23 @@ footer {
 	font-family: 'Open Sans';
 	font-weight: 700;
 	text-transform: uppercase;
-	background: #6cacd7 !important;
+	background: #518eb7 !important;
 	border-radius: 3px;
 	border: none 0 !important;
 	color: #fff !important;
 	padding: 15px 15px !important;
 	width: 190px;
-	-webkit-box-shadow: 0px 2px 0px #518eb7;
-	-moz-box-shadow: 0px 2px 0px #518eb7;
-	box-shadow: 0px 2px 0px #518eb7;
-	text-shadow: 0px 1px 0px #518eb7;
+	-webkit-box-shadow: 0px 2px 0px #396f94;
+	-moz-box-shadow: 0px 2px 0px #396f94;
+	box-shadow: 0px 2px 0px #396f94;
+	text-shadow: 0px 1px 0px #2e5f81;
 	margin-bottom: 10px !important;
 }
 	.btn-lg:hover {
-		background: #518eb7 !important;
-		-webkit-box-shadow: 0px 2px 0px #396f94;
-		-moz-box-shadow: 0px 2px 0px #396f94;
-		box-shadow: 0px 2px 0px #396f94;
+		background: #4984ac !important;
+		-webkit-box-shadow: 0px 2px 0px #366c90;
+		-moz-box-shadow: 0px 2px 0px #366c90;
+		box-shadow: 0px 2px 0px #366c90;
 	}
 
 .btn-lg.btn.buy {
@@ -354,6 +354,10 @@ hr.vertical.spacer {
 	float: left;
 	height: 200px; 
 	margin-left: -1px;
+}
+
+.bullet {
+	padding: 0 10px;
 }
 
 /* marquee */
