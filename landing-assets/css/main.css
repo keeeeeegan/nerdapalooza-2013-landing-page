@@ -737,16 +737,17 @@ hr.vertical.spacer {
 
 @media (min-width: 992px) {
 	.sub-msg.text-left p {
-		padding-top: 15px;
+		padding-top: 17px;
 	}
 
 	.sub-msg.text-right p {
-		padding-top: 5px;
+		padding-top: 8px;
 	}
 }
 
 @media (min-width: 1199px) {
-	.sub-msg.text-right p {
-		padding-top: 15px;
+	.sub-msg.text-right p,
+	.sub-msg.text-left p {
+		padding-top: 17px;
 	}
 }
