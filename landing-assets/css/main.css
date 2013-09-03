@@ -417,15 +417,22 @@ hr.vertical.spacer {
 
 .container .row.ctas.select .contact label {
 	text-align: left;
-	font-weight: 100;
+	font-weight: normal;
 	padding-left: 0;
-	font-family: 'nexa_boldregular';
+	font-family: 'Open Sans';
 	text-transform: uppercase;
+	font-size: 14px;
+	color: #d7d7d7;
 }
 
 .container .row.ctas.select .contact input,
 .container .row.ctas.select .contact textarea {
+	/*background-color: #d7d7d7;*/
 	border-radius: 0;
+}
+
+.container .row.ctas.select .contact textarea {
+	height: 145px;
 }
 
 .ctas b,
@@ -585,6 +592,12 @@ hr.vertical.spacer {
 		margin-right: 0;
 		margin-right: 0;
 	}
+
+	.container .row.ctas.select .contact label.control-label {
+		text-align: center;
+		width: 100%;
+		display: block;
+	}
 }
 
 @media (max-width: 650px) {
@@ -688,6 +701,9 @@ hr.vertical.spacer {
 		display: none;
 	}
 
+	.container .row.ctas.select .contact {
+		width: 100%;
+	}
 
 }
 
@@ -733,6 +749,12 @@ hr.vertical.spacer {
 		.ctas .volunteers {
 			margin-right: 40px;
 		}
+
+	.container .row.ctas.select .contact label {
+		text-align: left;
+		width: 100%;
+		display: block;
+	}
 }
 
 @media (min-width: 992px) {
