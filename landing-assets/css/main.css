@@ -71,10 +71,10 @@ b {
 		font-weight: 100;
 	}
 
-	.main-nav a:hover,
+	/*.main-nav a:hover,
 	.social a:hover {
 		color: #6dace2;
-	}
+	}*/
 
 .main-nav ul.social {
 	padding-top: 0;
@@ -381,15 +381,29 @@ hr.vertical.spacer {
 	width: 100%;
 	position: relative;
 	font-weight: 100;
-	padding-top: 8px;
+	padding-top: 5px;
 
 	display: block;
 	white-space: nowrap;
 	height: 40px;
 	font-weight: 100;
-	padding-left: 25px;
-	padding-right: 25px;
+	vertical-align: middle;
 }
+
+	.marquee span.featured {
+	font-family: 'nexa_boldregular';
+	/*padding-left: 1200px;	*/
+	/*font-size: 24px;*/
+	font-size: 35px;
+	line-height: 35px;
+	vertical-align: middle;
+	display: inline-block;
+	}
+
+		.marquee span.featured .bullet {
+			font-family: 'nexa_lightregular';
+	font-size: 20px;
+		}
 
 .social.full li.main {
 	display: none;
