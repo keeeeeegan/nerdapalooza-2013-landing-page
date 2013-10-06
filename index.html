@@ -78,12 +78,12 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="callout text-left">Earlybird Tickets on Sale Now!</h2>
+			<h2 class="callout text-left">Tickets on Sale Now!</h2>
 		</div>
 	</div>
 	<div class="order-now-bar row">
-		<div class="sub-msg col-md-4 text-left">
-			<p>Prices go up October 1st, <b>order ASAP!</b></p>
+		<div class="sub-msg col-md-4 text-left days-left">
+			<p>The festival starts <span class="when">soon</span>, <b>order ASAP!</b></p>
 		</div>
 		<div class="sub-msg button col-md-4 text-center">
 			<p><a class="btn btn-lg buy" href="http://www.flavorus.com/event/Nerdapalooza-2013/175967" target="_blank">Order Tickets</a></p>
@@ -97,7 +97,7 @@
 			<div class="marquee">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<span class="featured">They Might Be Giants <span class="bullet">&bull;</span>  Nerf Herder <span class="bullet">&bull;</span> Powerglove <span class="bullet">&bull;</span> The Protomen <span class="bullet">&bull;</span> 
-				MC Lars <span class="bullet">&bull;</span> MC Frontalot</span> <span class="bullet">&bull;</span> Moon Hooch <span class="bullet">&bull;</span> 
+				MC Lars <span class="bullet">&bull;</span> MC Frontalot <span class="bullet">&bull;</span></span> Moon Hooch <span class="bullet">&bull;</span> 
 				Solillaquists of Sound <span class="bullet">&bull;</span>
 				Shinobi Ninja <span class="bullet">&bull;</span> 
 				Green Jelly <span class="bullet">&bull;</span> 
@@ -137,8 +137,6 @@
 
 	<footer>
 		<div class="row">
-			<p class="copyright pull-left">Copyright 2013 Nerdapalooza, LLC</p>
-
 			<ul class="full social list-inline pull-right">
 				<li class="main"><a href="http://nerdapalooza.org/musicians/2013-guests/" target="_blank">Buy Tickets</a></li>
 				<li class="main"><a href="http://nerdapalooza.org/hotel/" target="_blank">Hotel</a></li>
@@ -148,6 +146,48 @@
 				<li class="main facebook"><a href="http://facebook.com/nerdapaloozafest" target="_blank">Facebook</a></li>
 				<li class="main twitter"><a href="http://twitter.com/nerdapalooza" target="_blank">Twitter</a></li>
 				<li class="main youtube"><a href="http://youtube.com/user/nerdapalooza" target="_blank">YouTube</a></li>
+				<li class="main contact"><a href="mailto:info@nerdapalooza.org">Contact</a></li>
+			</ul>
+		</div>
+		<div class="row sponsors">
+			
+			<h3 class="sponsors-heading">Sponsors</h3>
+			<div class="sponsor col-sm-3 first">
+				<h4 class="sponsors-subheading">64-Bit Sponsors</h4>
+				<ul>
+					<li><a href="http://stilettollc.com/" class="stiletto" target="_blank">Stiletto</a></li>
+					<li><a href="http://www.hertz.com/" class="hertz" target="_blank">Hertz</a></li>
+				</ul>
+			</div>
+			<div class="sponsor col-sm-3 second">
+				<h4 class="sponsors-subheading">32-Bit Sponsors</h4>
+				<ul>
+					<li><a href="http://www.cloudspace.com/" class="cloudspace" target="_blank">Cloudspace</a></li>
+					<li><a href="http://www.fangamer.net/" class="fangamer" target="_blank">Fangamer</a></li>
+					<li class="clear"><a href="http://sci-friedband.com/" class="scifried" target="_blank">Sci-Fried</a></li>
+					<li><a href="http://nerdy.fm/" class="nerdymusic" target="_blank">Nerdy Music</a></li>
+				</ul>
+			</div>
+			<div class="sponsor col-sm-3 third">
+				<h4 class="sponsors-subheading">16-Bit Sponsors</h4>
+				<ul>
+					<li><a href="http://nerdcorenow.com" class="nn" target="_blank">Nerdcore Now</a></li>
+					<li><a href="http://nerdcoremeow.com" class="nerdcoremeow" target="_blank">Nerdcore Meow</a></li>
+				</ul>
+			</div>
+			<div class="sponsor col-sm-3 fourth last">
+				<h4 class="sponsors-subheading">8-Bit Sponsors</h4>
+				<ul>
+					<li><a href="http://jeffdouglasphotography.com/" class="jeffdouglasphotography" target="_blank">Jeff Douglas Photography</a></li>
+					<li><a href="http://nerdyshow.com/" class="nerdyshow" target="_blank">Nerdy Show</a></li>
+					<li><a href="http://acomicshop.com/" class="acomicshop" target="_blank">A Comic Shop</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row bottom">
+			<p class="copyright pull-left">Copyright 2013 Nerdapalooza, LLC</p>
+
+			<ul class="full social list-inline pull-right">
 				<li class="contact"><a href="mailto:info@nerdapalooza.org">Contact</a></li>
 			</ul>
 		</div>
@@ -155,7 +195,18 @@
 </div>
 
 <script type="text/javascript" src="landing-assets/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="landing-assets/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="landing-assets/js/marquee.js"></script>
+<script type="text/javascript">
+	var $daysLeft = $('.days-left');
+	var starts = new Date('10/18/2013');
+	var now = new Date();
+	var diff = new Date(Math.abs(starts - now));
+
+	console.log(diff.getTime());
+
+	var days = Math.floor(diff.getTime()/(1000*60*60*24));
+
+	$daysLeft.find('.when').html("in " + days + " days");
+</script>
 </body>
 </html>

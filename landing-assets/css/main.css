@@ -151,13 +151,13 @@ h1.logo a {
 
 h2.callout {
 	font-family: 'nexa_boldregular', sans-serif;
-	color: #6298e4;
+	color: #fff;
 	text-transform: uppercase;
-	font-size: 62px;
 	line-height: 50px;
 	margin-top: 5px;
 	font-weight: 100;
 	text-align: center;
+	font-size: 70px;
 }
 
 h2.choose {
@@ -209,6 +209,8 @@ h2.choose {
 	-webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
 	-moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
 	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
+	z-index: 900;
+	position: relative;
 }
 	.ctas .cta {
 		box-sizing: content-box;
@@ -223,7 +225,8 @@ h2.choose {
 
 	.ctas .performers {
 		background: url('../images/button-cta-icons-performers.png') center 20px no-repeat;
-
+z-index: 1100;
+position: relative;
 		margin-left: 70px;
 		margin-right: 0px;
 	}
@@ -289,6 +292,8 @@ h2.choose {
 	color: #4c5d79;
 	text-transform: uppercase;
 	font-weight: 100;
+	z-index: 1100;
+	position: relative;
 }
 
 .performers-heading span {
@@ -359,6 +364,156 @@ hr.vertical.spacer {
 
 .bullet {
 	padding: 0 10px;
+
+	font-family: 'nexa_boldregular';
+}
+
+/* sponsors */
+
+.sponsors h3 {
+	display: none;
+}
+
+.container .row.sponsors {
+	background: #171717;
+	color: #2b3442;
+	border: solid 1px #212937;
+	border-width: 0 0 1px 0;
+	margin-bottom: 15px;
+	padding-top:30px;
+	margin-top: -25px;
+	margin-left: -40px;
+	margin-right: -40px;
+
+	z-index: 500;
+	position: relative;
+	text-align:center;
+}
+
+
+.sponsors ul,
+.sponsors ul li {
+	margin:0;
+	padding:0;
+}
+
+.sponsors ul li {
+	display: inline-block;
+	list-style-type: none;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.container .row.sponsors .sponsor ul li {
+	max-width: 100%
+}
+.container .row.sponsors .sponsor ul li a {
+	height: 0;
+	overflow: hidden;
+	display: block;
+	background-size: contain;
+	max-width: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.sponsors ul li.clear {
+	clear: both;
+}
+
+.sponsors ul li a {
+}
+
+.sponsors ul li a.hertz {
+	background-image: url('../images/sponsor-logo-hertz.png');
+	width: 179px;
+	padding-top: 68px;
+}
+.sponsors ul li a.stiletto {
+	background-image: url('../images/sponsor-logo-stiletto.png');
+	width: 197px;
+	padding-top: 107px;
+}
+.sponsors ul li a.cloudspace {
+	background-image: url('../images/sponsor-logo-cloudspace.png');
+	width: 195px;
+	padding-top: 27px;
+}
+.sponsors ul li a.fangamer {
+	background-image: url('../images/sponsor-logo-fangamer.png');
+	width: 195px;
+	padding-top: 39px;
+	
+	margin-left: 10px;
+}
+.sponsors ul li a.scifried {
+	background-image: url('../images/sponsor-logo-scifried.png');
+	width: 112px;
+	padding-top: 59px;
+
+	margin-top: 10px;
+}
+.sponsors ul li a.nerdymusic {
+	background-image: url('../images/sponsor-logo-nerdymusic2.png');
+	width: 100px;
+	padding-top: 68px;
+	
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.sponsors ul li a.jeffdouglasphotography {
+	background-image: url('../images/sponsor-logo-jeffdouglasphotography.png');
+	width: 115px;
+	padding-top: 80px;
+}
+.sponsors ul li a.nerdyshow {
+	background-image: url('../images/sponsor-logo-nerdyshow2.png');
+	width: 110px;
+	padding-top: 75px;
+}
+.sponsors ul li a.nn {
+	background-image: url('../images/sponsor-logo-nn.png');
+	width: 90px;
+	padding-top: 80px;
+}
+.sponsors ul li a.nerdcoremeow {
+	background-image: url('../images/sponsor-logo-nerdcoremeow.png');
+	width: 130px;
+	padding-top: 80px;
+}
+.sponsors ul li a.acomicshop {
+	background-image: url('../images/sponsor-logo-acomicshop.png');
+	width: 110px;
+	padding-top: 75px;
+}
+
+
+.sponsors .sponsor {
+	border: solid 1px #212937;
+	border-width: 1px 0 0 0;
+	min-height: 245px;
+}
+
+.sponsors .sponsor.second {
+	border: solid 1px #212937;
+	border-width: 1px 1px 0 1px;
+}
+
+	.container .row.sponsors .sponsor.first {
+		padding-left: 30px;
+	}
+
+	.container .row.sponsors .sponsor.third {
+	border: solid 1px #212937;
+	border-width: 1px 1px 0 0;
+	}
+
+.sponsors h4 {
+	font-family: 'nexa_boldregular', sans-serif;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 13px;
 }
 
 /* marquee */
@@ -369,6 +524,8 @@ hr.vertical.spacer {
 	background: #181f2a;
 	border-width: 1px 0;
 	text-transform: uppercase;
+	z-index: 1000;
+	position: relative;
 }
 
 .marquee {
@@ -388,21 +545,31 @@ hr.vertical.spacer {
 	height: 40px;
 	font-weight: 100;
 	vertical-align: middle;
+	padding-top: 8px;
 }
 
 	.marquee span.featured {
 	font-family: 'nexa_boldregular';
 	/*padding-left: 1200px;	*/
 	/*font-size: 24px;*/
-	font-size: 35px;
-	line-height: 35px;
+	/*font-size: 24px;
+	line-height: 24px;*/
 	vertical-align: middle;
 	display: inline-block;
+	font-weight: 100;
 	}
 
 		.marquee span.featured .bullet {
-			font-family: 'nexa_lightregular';
-	font-size: 20px;
+			/*font-family: 'nexa_lightregular';*/
+			/*font-size: 20px;
+			
+			padding-top: 21px;
+			height: 0;
+			width: 30px;
+			overflow: hidden;
+			padding-left: 30px;
+			padding-right: 30px;
+			display: inline-block;*/
 		}
 
 .social.full li.main {
@@ -460,6 +627,16 @@ hr.vertical.spacer {
 	text-align: left;
 	display: inline-block;
 	float: none;vertical-align: top;
+}
+
+footer .sponsors-heading {
+	font-family: 'nexa_boldregular', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 100;
+	display: none;
+	font-size: 13px;
+	text-align:center;
 }
 
 /* Responsive Tweaks */
@@ -570,6 +747,35 @@ hr.vertical.spacer {
 		display: block;
 	}
 
+	footer .sponsors-heading {
+		display: block;
+		margin-top: -50px;
+		padding-bottom: 20px;
+		font-size: 15px;
+		border: solid 1px #212937;
+		border-width: 1px 0 0 0;
+		background: #171717;
+		padding-top: 20px;
+	}
+
+	footer ul.social.full {
+		padding-bottom: 15px;
+	}
+
+	footer .bottom .social {
+		display: none;
+	}
+	footer .bottom .copyright {
+		padding-top: 25px;
+	}
+
+	.container footer .row.sponsors {
+		margin-bottom: 0;
+
+		border: solid 1px #212937;
+		border-width: 0 0 1px 0;
+	}
+
 	.row.main-nav {
 		border-width: 1px 0 0 0;
 		margin-bottom: 10px;
@@ -585,7 +791,7 @@ hr.vertical.spacer {
 		width: 100%;
 		float: none !important;
 		text-align: center;
-		font-size: 13px;
+		font-size: 15px;
 		padding: 8px 0;
 	}
 
@@ -611,6 +817,46 @@ hr.vertical.spacer {
 		text-align: center;
 		width: 100%;
 		display: block;
+	}
+
+	.container .row.sponsors {
+		margin-top: 15px;
+		border-bottom: 0;
+		padding-top: 25px;
+	}
+
+	.container .row.sponsors .sponsor ul li a {
+		display: inline-block;
+		float: none;
+	}
+
+	.container .row.sponsors .sponsor, 
+	.container .row.sponsors .sponsor ul {
+		text-align: center;
+		min-height:0;
+	}
+
+	.container .row.sponsors .sponsor {
+		padding-bottom: 20px;
+	}
+
+	.container .row.sponsors .sponsor.second {
+		border-right-width: 0;
+		border-left-width: 0;
+	}
+
+	.sponsors ul li {
+		display: inline-block;
+		float: none;
+	}
+
+	.sponsors h4 {
+		background: #171717;
+		padding: 10px;
+		width: 195px;
+		margin: 0 auto;
+		margin-top: -17px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -768,6 +1014,23 @@ hr.vertical.spacer {
 		text-align: left;
 		width: 100%;
 		display: block;
+	}
+	.container .sponsors .sponsor {
+		min-height: 300px;
+	}
+
+	.sponsors ul li a.fangamer {
+		margin-left: 0px;
+	}
+
+	.sponsors ul li a.nerdymusic {
+		margin-left: 0px;
+		margin-top: 5px;
+	}
+
+	.sponsors ul li a.nerdcoremeow,
+	.sponsors ul li a.scifried {
+		margin-top: 5px;
 	}
 }
 

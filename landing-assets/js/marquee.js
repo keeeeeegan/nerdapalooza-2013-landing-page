@@ -18,7 +18,7 @@ $('.marquee span.last').css('padding-right', frontPadding);
 var marqueeTextWidth = $('.marquee').textWidth();
 var marqueeWidth = $('.marquee').width();
 var marqueeOuterWidth = $('.marquee').outerWidth();
-var marqueeTime = 5000;//marqueeTextWidth * 10;
+var marqueeTime = marqueeTextWidth * 10;
 
 var scrollDistance = marqueeTextWidth - marqueeWidth + 100;
 
@@ -35,6 +35,14 @@ function startMarquee() {
 //				}, (marqueeTime), "linear", function() {
 //					startMarquee();
 //			});
+
+			//$(this).animate({
+			//	opacity: 0
+			//	}, (300), function() {
+			//		$(this).scrollLeft(0);
+			//		//$(this).opacity(1);
+			//		startMarquee();
+			//});
 			
 			$(this).scrollLeft(0);
 			startMarquee();
