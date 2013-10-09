@@ -45,6 +45,88 @@ b {
 	-webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.55);
 	-moz-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.55);
 	box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.55);
+
+	z-index: 30;
+	position: relative;
+}
+
+.container.top {
+
+	width: 100%;
+	max-width: 100%;
+
+	background: url('../images/gradient-top.png') 0% 0% repeat-x;
+	background-color: transparent;
+	font-family: 'Open Sans';
+	color: #efefef;
+	height: 540px;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+	z-index: 20;
+	position: relative;
+}
+
+.container.top-content {
+
+	background: transparent;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+}
+
+.container.carousel {
+	width: 100%;
+	max-width: 100%;
+	background: 0;
+	text-align: center;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	height: 535px;
+	overflow: hidden;
+	margin-top: -540px;
+	z-index: 10;
+	position: relative;
+	padding: 0;
+}
+
+.container.carousel .photo {
+	width: 100%;
+	max-width: 100%;
+
+	position: absolute;
+	top: 0;
+	text-align: center;
+	background-color: transparent;
+	height: 530px;
+	margin: 0;
+	left: 0;
+	right: 0;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.container.carousel .photo {
+	display: none;
+}
+
+.container.carousel .photo.show {
+	display: block;
+}
+
+.row.buy-button-section {
+	background: url('../images/gradient-bottom.png') 0% 0% repeat-x;
+	background-color: transparent;
+	height: 100px;
+	margin-top: -110px;
+	padding-top: 22px;
+	margin-right: -46px;
+	margin-left: -46px;
 }
 
 .ctas {
@@ -153,11 +235,11 @@ h2.callout {
 	font-family: 'nexa_boldregular', sans-serif;
 	color: #fff;
 	text-transform: uppercase;
-	line-height: 50px;
+	line-height: 36px;
 	margin-top: 5px;
 	font-weight: 100;
 	text-align: center;
-	font-size: 70px;
+	font-size: 60px;
 }
 
 h2.choose {
@@ -862,6 +944,11 @@ footer .sponsors-heading {
 
 @media (max-width: 650px) {
 
+	body {
+		overflow-x: hidden;
+		background-color: #0d0d0d;
+	}
+
 		.about ul li {
 			font-size: 10px;
 			line-height: 12px;
@@ -870,10 +957,14 @@ footer .sponsors-heading {
 			padding: 0 5px 0 5px;
 		}
 	h2.callout {
-		font-size: 27px;
-		line-height: 26px;
+		font-size: 50px;
+		line-height:45px;
+		margin-top: 6px;
 	}
 
+	.container.top {
+		background-position: 0% -55px;
+	}
 
 	.container .row.ctas {
 		box-sizing: content-box;
@@ -893,6 +984,20 @@ footer .sponsors-heading {
 		margin-right: 0;		float: none;
 		margin: 0 auto;
 	}
+
+	.main.container {
+		margin-top: -20px;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+	}
+	
+	.row.main-nav {
+		border-width: 0;
+	}
+
 	.container .row.ctas .col-md-4.cta.vendors {
 
 		background: url('../images/button-cta-icons-vendors.png') center 20px no-repeat;
@@ -963,6 +1068,17 @@ footer .sponsors-heading {
 
 	.container .row.ctas.select .contact {
 		width: 100%;
+	}
+
+	.row.buy-button-section.order-now-bar {
+		background: url('../images/gradient-fade-up.png') 0% -80px repeat-x;
+		background-color: transparent;
+		height: 175px;
+		margin-top: -190px;
+		padding-top: 22px;
+		border-top: 1px solid #34465f;
+width: 150%;
+margin-left: -25%;
 	}
 
 }
