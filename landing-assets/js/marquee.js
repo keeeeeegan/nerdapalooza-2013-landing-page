@@ -1,3 +1,4 @@
+// pretty simple marquee for nerdapalooza landing page
 
 // calculate actual width of marquee
 // http://stackoverflow.com/a/2771544

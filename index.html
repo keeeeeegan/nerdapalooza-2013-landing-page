@@ -3,6 +3,40 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Nerdapalooza 2013</title>
+	<!--
+	                 -/oydmNMMMMMNmdys+-`                          `-+sydmNMMMMMNmdyo/-                 
+	            `:sdMMMMMMMMMMMMMMMMMMMMMms/`                  `/smMMMMMMMMMMMMMMMMMMMMMds:             
+	          :yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMh/    ``..``    /hMMMMMMMMMMMMMMMMMMMMMMMMMMMMNy:          
+	       `omMMMMMMMMNhs+/-.....-:+shNMMMMMMMMNmNNmmmmmmNNmNMMMMMMMMNhs+:-.....-/+sdNMMMMMMMMm+`       
+	      +NMMMMMMMd+-                 /mMMMMMMMMNo`    `oNMMMMMMMMm/                 -+dMMMMMMMN+      
+	    .dMMMMMMNo.                 -sNMh+-+mMMMMMMm-  -mMMMMMMm+-+hMNs-                 .oNMMMMMMd.    
+	   /NMMMMMMm:`                /dMd/`     +NMMMMMM++MMMMMMN/     `/dMd/                 -dMMMMMMN/   
+	  /MMMMMMMMMMMmyo:`         /mMh-         `yMMMMMMMMMMMMy`         -hMm/          -/sdNMMMMMMMMMM/  
+	 :MMMMMMMMMMMMMMMMMNho:.  `hMm-             oMMMMMMMMMMo             -mMh`  `-+ydMMMMMMMMMMMMMMMMM- 
+	`mMMMMMh+shmMMMMMMMMMMMMNhNMy                sMMMMMMMMs               `yMNymMMMMMMMMMMMMNdy+hMMMMMm 
+	+MMMMMN`     .:+sdNMMMMMMMMs                  mMMMMMMm                  sMMMMMMMMMdyo/-`    `NMMMMM+
+	dMMMMMs            `-/ohMMy                   +MMMMMM+                   yMMds+:.            sMMMMMd
+	NMMMMM:                oMN`           `:++/.  -MMMMMM-                   `NMo                :MMMMMN
+	MMMMMM:                mMy          .hMMMMMMm:.MMMMMM. ://.               yMm                :MMMMMM
+	mMMMMM+               `MM+         `NMMMMMMMMMsMMMMMMoNMMMMs              +MM`               +MMMMMm
+	yMMMMMh                NMo         .MMMMMMMMMMMMMMMMMMMMMMMm              oMN                dMMMMMy
+	-MMMMMM:               sMm`         oMMMMMMMMNMMMMMMMMshmds.             `mMs               :MMMMMM-
+	 yMMMMMN.              `mMy          .odmmdy+mMMMMMMMMm.                 yMm`              .NMMMMMy 
+	 `dMMMMMN-              -NMo               -mMMMMMMMMMMm.               oMN.              :NMMMMMd` 
+	  `dMMMMMMo`             -NMs             +MMMMMMmmMMMMMN+             sMN-             `oMMMMMMd`  
+	   `yMMMMMMm+`            .MM-          /mMMMMMMh``hMMMMMMm/          -MM.            `+NMMMMMMy`   
+	     /NMMMMMMNs-          :MN        -oNMMMMMMN+    +NMMMMMMNo-        NM:          -sNMMMMMMN/     
+	      `oNMMMMMMMNy+-`     sMs   `-+ymMMMMMMMMs`      `sMMMMMMMMmy+-`   sMs     `-+yNMMMMMMMNo`      
+	        `+mMMMMMMMMMMNdhysNMdhdNMMMMMMMMMMmo`          `omMMMMMMMMMMNdhdMNsyhdNMMMMMMMMMMm+`        
+	           -odMMMMMMMMMMMMMMMMMMMMMMMMMms-                -smMMMMMMMMMMMMMMMMMMMMMMMMMdo-           
+	              `/shNMMMMMMMMMMMMMMMNMMN.          .`          oMMmNMMMMMMMMMMMMMMMNhs/`              
+	                   `-:/+oMMyo+/:-`+MMd          yMM-         /MMd``-:/+oyMMo+/:-`                   
+	                        .MMd/    /MMm`          hMM:          oMMh     /dMM.                        
+	                        `+mMMNs:/MMN.           dMM:           sMMy./yNMMm+`                        
+	                           -smMMMMMy:.          dMM:         .:+NMMMMMdo-                           
+	                              `/ohmMMMMmdhyso++/mMMs++osyhdNMMMMNds+-                               
+	                                   `.:+oyhddmNNMMMMMNmmdhyso/:.`                                    
+	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="landing-assets/css/main.css" rel="stylesheet" media="all">
 	<link href="landing-assets/css/bootstrap.min.css" rel="stylesheet" media="all"  />
@@ -210,16 +244,17 @@
 </div>
 
 <script type="text/javascript" src="landing-assets/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="landing-assets/js/marquee.js"></script>
+<script type="text/javascript" src="landing-assets/js/marquee.min.js"></script>
+<script type="text/javascript" src="landing-assets/js/carousel.min.js"></script>
 <script type="text/javascript">
+	
+	// calculate the days left and update the cta
 	var $daysLeft = $('.days-left');
 	var starts = new Date('10/18/2013');
 	var now = new Date();
 
-	var diff = new Date(Math.abs(starts - now));
+	var diff = new Date(Math.abs(starts - now)); // yep, you can just subtract dates
 	var days = Math.floor(diff.getTime()/(1000*60*60*24));
-
-	console.log(diff);
 
 	// if the days left is negative, we know it's already started.
 	if (diff < 0) {
@@ -231,20 +266,6 @@
 	else {
 		$daysLeft.children('.when').html("in " + days + " days");
 	}
-</script>
-<script type="text/javascript">
-
-	var count = 1;
-	var next = 0;
-	var max = $('.carousel .photo').length;
-	console.log(max);
-	setInterval(function() {
-		$('.carousel .photo:nth-child(' + count + ')').fadeOut('slow');
-		next = (count + 1 <= max) ? (count + 1) : 1;
-		$('.carousel .photo:nth-child(' + next + ')').fadeIn('slow');
-		count = next;
-	}, 5000);
-
 </script>
 </body>
 </html>
