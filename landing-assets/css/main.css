@@ -95,6 +95,21 @@ b {
 	padding: 0;
 }
 
+.container.carousel .overlay {
+	width: 1181px;
+	margin:0 auto;
+
+	position: absolute;
+	top: 0;
+	left: 1px;
+	right: 1px;
+	text-align: center;
+	background-color: transparent;
+	height: 530px;
+	background: url('../images/gradient-bottom.png') 50% 427px repeat-x;
+	z-index: 50;
+}
+
 .container.carousel .photo {
 	width: 100%;
 	max-width: 100%;
@@ -120,13 +135,12 @@ b {
 }
 
 .row.buy-button-section {
-	background: url('../images/gradient-bottom.png') 0% 0% repeat-x;
 	background-color: transparent;
 	height: 100px;
 	margin-top: -110px;
 	padding-top: 22px;
-	margin-right: -46px;
-	margin-left: -46px;
+	/*margin-right: -46px;
+	margin-left: -46px;*/
 }
 
 .ctas {
@@ -1070,13 +1084,17 @@ footer .sponsors-heading {
 		width: 100%;
 	}
 
+	.container.carousel .overlay {
+		background: url('../images/gradient-fade-up.png') 100% 100% repeat-x;
+	}
+
 	.row.buy-button-section.order-now-bar {
-		background: url('../images/gradient-fade-up.png') 0% -80px repeat-x;
-		background-color: transparent;
+/*		background: url('../images/gradient-fade-up.png') 0% -80px repeat-x;
+		background-color: transparent;*/
 		height: 175px;
 		margin-top: -190px;
 		padding-top: 22px;
-		border-top: 1px solid #34465f;
+/*		border-top: 1px solid #34465f;*/
 width: 150%;
 margin-left: -25%;
 	}
