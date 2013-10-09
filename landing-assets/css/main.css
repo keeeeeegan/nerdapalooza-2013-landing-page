@@ -945,7 +945,7 @@ footer .sponsors-heading {
 @media (max-width: 650px) {
 
 	body {
-		overflow-x: hidden;
+		overflow-x: hidden; /* using this to determine if carousel should be used */
 		background-color: #0d0d0d;
 	}
 
