@@ -38,7 +38,7 @@
 	                                   `.:+oyhddNNNNNNNNNNNdhyso/:.`                                    
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="landing-assets/css/nerdapalooza.min.css" rel="stylesheet" media="all">
+	<link href="landing-assets/css/main.css" rel="stylesheet" media="all">
 	<link href="landing-assets/css/bootstrap.min.css" rel="stylesheet" media="all"  />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 
@@ -244,7 +244,28 @@
 </div>
 
 <script type="text/javascript" src="landing-assets/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="landing-assets/js/nerdapalooza.min.js"></script>
+<script type="text/javascript" src="landing-assets/js/marquee.js"></script>
+<script type="text/javascript" src="landing-assets/js/carousel.js"></script>
+<script type="text/javascript">
+	
+	// calculate the days left and update the cta
+	var $daysLeft = $('.days-left');
+	var starts = new Date('10/18/2013');
+	var now = new Date();
 
+	var diff = new Date(Math.abs(starts - now)); // yep, you can just subtract dates
+	var days = Math.floor(diff.getTime()/(1000*60*60*24));
+
+	// if the days left is negative, we know it's already started.
+	if (diff < 0) {
+		// hide the ticket button
+	}
+	else if (days == 1) {
+		$daysLeft.html("Only one day left to order tickets! <b>ORDER NOW!</b>");
+	}
+	else {
+		$daysLeft.children('.when').html("in " + days + " days");
+	}
+</script>
 </body>
 </html>
